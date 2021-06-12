@@ -1,0 +1,146 @@
+-	LeetCode Questions Tips:
+	-	Read question properly. Check constraints. Always check if input can be -ve. Might mess up a lot of algorithms. For example mod, power, bit opearions etc.
+
+=> Check constraints:
+	1. Check if input can be -ve
+	2. Check if n==0
+	3. Check if linked list length is 0
+
+=> Convert integer to string :
+	1. string s = to_string(x);
+	2. Can be used with int, long, ll, ld, double, float, unsigned
+
+=> Convert string to int :
+	1. int to string : stoi(string)
+	2. Similar functions : stol, stoul, stoll, stof, stod, stold,
+	3. Throws std::out_of_range error, you can catch it.
+
+=> Try Catch:
+Useful scenerio :
+	Suppose you want to rev an int, and if out of range return 0.
+	You can convert int to str, use str reverse, convert str to int and if out_of_range error is thrown, catch it and return 0.
+
+Syntax:
+	try{
+		// convert int to str
+		// rev the str;
+		// convert str to int
+		return rev_int;
+	}
+	catch(std::out_of_range){
+		return 0;
+	}
+
+=> Stack :
+Inbuilt Stack: Syntax and Functions
+	stack<int> s;
+	Functions :
+		1. push
+		2. pop(does not return top element)
+		3. top
+		4. size
+		5. empty
+			always use this before accessing members
+			always prefer empty over size()==0
+		6. stackname1.swap(stackname2)
+
+=> Linked Lists:
+	Make sure to include size==0 case separately cause head is not allocated at that time.
+
+=> size() with vector:
+	Using size() with vector sometimes create problems since it return size_type, so either cast it to int or assign it to a separate variable. I prefer later approach.
+
+=> Substring :
+	string substr (size_t pos = 0, size_t len = npos) const;
+	Details : https://www.cplusplus.com/reference/string/string/substr/
+
+=> lower_bound and upper_bound: // logn
+	These function work with binary search to return iterator to the element > or >=.
+
+	Def:
+	Iterator lower_bound (Iterator first, Iterator last, const val)
+	Iterator upper_bound (Iterator first, Iterator last, const val)
+	lower_bound returns an iterator pointing to the first element in the range [first,last) which has a value >= ‘val’.
+	upper_bound returns an iterator pointing to the first element in the range [first,last) which has a value > ‘val’.
+
+	Details: https://www.cplusplus.com/reference/algorithm/upper_bound/
+	https://www.geeksforgeeks.org/upper_bound-and-lower_bound-for-vector-in-cpp-stl/
+
+	Each container has its own lower_bound & upper_bound also. For ex: v.lower_bound calls lower_bound function of v
+
+=> Spliting str in c++ based on space:
+	A simple code can be written using stringstream
+
+	Code:
+	string s;
+	stringstream ss(s);
+	string word;
+	while( cin>>word ){
+		cout<<word<<endl;
+	}
+
+	For general spliting using any delimiter, you need to use substr and find function combination.
+	Link : https://www.geeksforgeeks.org/how-to-split-a-string-in-cc-python-and-java/
+
+=> Long number operations:
+	How to add numbers stored in form of array/string. You can think of it in terms of DC carry add logic. Try implementing it.
+	Corner case: 19, 49, 99 etc.
+	See this : https://leetcode.com/submissions/detail/494916520/
+
+=> Insert in c++ vector:
+	std::vector::insert(position, val)
+	Helps to insert at start of a vector.
+
+=> Ternery operator:
+	Generally makes life easier to work with one line if-else
+
+=> Stair climbing problem :
+	Fibonacci method gives you permutaion of ways to climb the stairs.
+	It treats 1, 3 and 3, 1 as different configurations. So be careful about that and learn combination approach also.
+
+	Question : https://leetcode.com/problems/climbing-stairs/
+
+=> Class vs struct member access:
+	Link : https://en.cppreference.com/w/cpp/language/operator_member_access
+	Basically use . to access members of an object and -> to access members of a pointer. -> works as (*ptr).member in short.
+
+	See comma operator also: can be used to write multiple line code in one line (literally). Can be very useful in writing simple loops statements properly.
+
+=> Binary tree min depth:
+	Link : https://leetcode.com/problems/minimum-depth-of-binary-tree/
+	Corner Case: If there is no branch, you do not treat it as 0 length branch. Instead, you just calculate the depth for other branch if it exists.
+
+=> Use of xor:
+	Can be used to check if two numbers are equal or not. Or remove duplicates.
+	Link : https://leetcode.com/problems/single-number/
+
+	Properties : a^b = 1 if a and b are different, 0 if they are same.
+	a^a = 0 so it negates the duplicates.
+	x^0 = x so you can use it as base value if you need to calculate xor of an array.
+
+=> Frequency of letters/alphabets
+	frequency[s[i]-'a']++; works perfectly. No need to convert to int explicitly.
+	Note: Remember to assign frequency values to 0 as though.
+
+=> Trailing zeroes in n!
+	Add n/5 + n/25 + n/125 till value highest possible value. Feeling is every 5 contribute to one 0 and you get plenty of 2 so no need to worry about it.
+
+	However, multiples of 25 gives two 5, one of which is already counted in 5 so you only need 1 more.
+
+=> Primes less than n:
+	Idea is to use sieve only but make sure to use ll as loop variable otherwise you may encounter overflow for big values. Fix this in sieve snippet also.
+
+=> Check if a number is power of 2:
+	Make sure to check if -ve input is possible. Otherwise setbits functions might mess up.
+	Link : https://leetcode.com/problems/power-of-two/
+
+=> Binary Search second form (ans one):
+	Works sexy, always consider lower_bound scenario when thinking about default value. Keeping r<l return value as when there is no value, like an empty array, ans default value is the value in case answer does not exist. Both can be different but mostly remains same.
+
+=> You can find nth fibonacci in logn also.
+	Link: https://cp-algorithms.com/algebra/fibonacci-numbers.html
+
+=> See lamda in c++:
+	Basic use: to write comparator function locally instead of separately. You can even pass parameter to comparator using lamda and then use it in sort/rev/or any other function.
+	Question : https://leetcode.com/problems/sort-array-by-increasing-frequency/
+	Link: https://en.cppreference.com/w/cpp/language/lambda
