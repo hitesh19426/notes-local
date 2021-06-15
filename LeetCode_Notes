@@ -1,7 +1,7 @@
--	LeetCode Questions Tips:
-	-	Read question properly. Check constraints. Always check if input can be -ve. Might mess up a lot of algorithms. For example mod, power, bit opearions etc.
+=>	LeetCode Questions Tips:
+	1. Read question properly. Check constraints. Always check if input can be -ve. Might mess up a lot of algorithms. For example mod, power, bit opearions etc.
 
-=> Check constraints:
+=>	Check constraints:
 	1. Check if input can be -ve
 	2. Check if n==0
 	3. Check if linked list length is 0
@@ -144,3 +144,9 @@ Inbuilt Stack: Syntax and Functions
 	Basic use: to write comparator function locally instead of separately. You can even pass parameter to comparator using lamda and then use it in sort/rev/or any other function.
 	Question : https://leetcode.com/problems/sort-array-by-increasing-frequency/
 	Link: https://en.cppreference.com/w/cpp/language/lambda
+
+=> simulate a process or game:
+	In some question, you are asked to simulate a game/process. Then you need to print the output in certain order. How you can do this/thinking process:
+	See this: https://leetcode.com/problems/reveal-cards-in-increasing-order/
+
+	View how we assumed we know the answer. Then, we played the game/process, and found out what the ouptut should have been, then we found that output in array and put it at its correct poisition.
