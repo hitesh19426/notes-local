@@ -1,5 +1,16 @@
-15th Jun 2021
+14th Jun 2021
 
-CSES - Playlist   - longest length subarry with unique element
-CSES - BookShop   - knapsack - use array
-CSES - Money Sums - Permutation/Combination
+CSES - Playlist   - longest length subarry with unique element  (13th)
+CSES - BookShop   - knapsack - use array    (14th)
+CSES - Money Sums - Permutation/Combination (15th)
+CSES - Coin Combination1 - Iterative
+CSES - Dice Combination - Iterative
+
+CSES - Projects - Weighted Job Scheduling - nlogn  (16th)
+CSES - Increasing Subsequence - LIS - nlogn  (17th)
+CSES - Rectangle cutting - greedy does not work (18th)
+CSES - Edit Distance - string matching - remember base case    (19th)
+CSES - Removing digits - use bool array   (20th)
+CSES - Coin combinations 2 - coin change problem combination - got correct dp, see memory optimization - Time : O(n*k), Space : O(n)   (21st)
+CSES - Minimizing coins - minimize coins to achieve sum  (22nd)
+CSES - Two Sets - knapsack with no of ways - note how to count no of sets%mod /2    (23rd)

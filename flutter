@@ -1,0 +1,32 @@
+Why flutter:
+   Flutter can be used to build android, ios, web and even linux apps simultaneoulsy with just one database. Thats the best part. You make 3/4 app with one database.
+   Flutter uses material design (check https://material.io/design), which makes your app looks good which trying.
+   It allows you to use OOPs into apps, which helps in structuring of the code.
+
+Basics of Flutter:
+   Everything in flutter is a widget, I mean everything. So text, image, container, layout, icon or anything else is a widget.
+   Every widget in flutter is represented using a class. So every widget is a class but not vice-versa. You can create a class to store just data, it would not be a widget then.
+   Flutter uses dart as a base language, so everything you write is in dart. Flutter just extends it to use different functionalities.
+
+   Flutter builds something called a widget tree. It is nothing but widgets nested inside each other to represent one big screen/layout/widget itself.
+   So you can have a icon inside a text, or text inside a icon or button etc. They all form a tree like structure of widgets hence widget tree.
+   (https://www.youtube.com/watch?v=bKueYVtV0eA&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=2)
+
+   Each widget has certain properties which you can control to customzise them.
+
+   Use ctrl+Q to see suggestion for any component.
+
+Stateless vs Stateful Widget
+
+Stateless : Stateless widget does not change state/data. It can have data but that data can not be changed. For example a custom styled Text.
+
+Stateful : This type of widget can contain data that changes over time. Maybe like a counter variable which changes when a button is pressed.
+
+
+Expanded Widgets:
+[https://youtu.be/zNZvuP8h1vs]
+   Make it easier to expand widgets in rows/columns
+   Useful to contain images within the boundaries of the screen
+
+Flutter Docs :
+https://flutter.dev/docs

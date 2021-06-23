@@ -1,0 +1,88 @@
+Scaffold:
+   appbar : AppBar
+   body : Widget
+   backgroundColor : Color
+   floatingActionButton : FloatingActionButton
+
+AppBar:
+   title : Text
+   centertitle : bool
+
+FloatingActionButton:
+   child : Widget
+   backgroundColor : Color
+   onPressed : Function
+
+Center:
+   child : Widget
+
+Text:
+   String   // like a default non-named parameter
+   style : TextStyle
+
+TextStyle:
+   fontSize : double
+   fontWeight : FontWeight.bold
+   letterSpacing : double
+   color : Color
+   fontFamily : String  // name of font family
+   [https://www.youtube.com/watch?v=km2P_KQJyO0&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=6]
+
+Image:
+   image : NetworkImage/AssetImage
+   // You need to add assests in pubsmec.yaml file to assess assests image. Check link.
+   [https://www.youtube.com/watch?v=Hxh6nNHSUjo&list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ&index=8]
+
+   shortcut:
+   Image : Image(child : NetworkImage('url'))
+
+   Image.network('url')
+
+RaisedButton/FlatButton:
+   onPressed : Function
+   child : Widget
+   color : Color
+
+// Button with icon and text
+RaisedButton.icon()/FlatButton.icon()
+   onPressed : Function
+   icon : Icons
+   label : Text
+   color : Color
+
+Icon:
+   icon : Icons
+   color : Colors
+   size : double
+
+
+// Padding & Margin
+Padding:
+   padding : EdgeInsets.symmetric()
+   child : Widget
+
+// Container takes the size of the widget or whole available if no children is specified.
+Container:
+   padding :
+   margin :
+   child :
+   color : Color
+
+// Rows & Column
+Row:
+   children : <Widget>[]   // Widget list
+   // You can use expanded widgets here too
+   [https://youtu.be/zNZvuP8h1vs]
+   mainAxisAlignment : MainAxisAlignment.spaceEvenly
+   mainAxisSize : MainAxisSize.min
+   crossAxisSize : CrossAxisAlignment.start
+
+Column:
+   children : <Widget>[]   // Widget list
+   mainAxisAlignment : MainAxisAlignment.spaceEvenly
+   mainAxisSize : MainAxisSize.min
+   crossAxisSize : CrossAxisAlignment.start
+
+Expanded:
+   child : Widget
+   flex : int
