@@ -150,3 +150,6 @@ Inbuilt Stack: Syntax and Functions
 	See this: https://leetcode.com/problems/reveal-cards-in-increasing-order/
 
 	View how we assumed we know the answer. Then, we played the game/process, and found out what the ouptut should have been, then we found that output in array and put it at its correct poisition.
+
+=> Use of array for char set;
+	If you ever encounter a situation where you need to find character present in a string, do something on char in sorted order or such, use bool arr[26] to do it. It works faster than sorting/map/set or any other thing.
